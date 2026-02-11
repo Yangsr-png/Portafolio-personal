@@ -22,23 +22,26 @@ export const Contact = () => {
       })
   }
 
-  const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/contact", {
+
+    let response = await fetch("https://formspree.io/f/mwvnvnnr", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
+        "Accept": "application/json" 
       },
       body: JSON.stringify(formDetails),
     });
+
     setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code == 200) {
-      setStatus({ succes: true, message: 'Message sent successfully'});
+    
+    if (response.ok) {
+      setStatus({ success: true, message: 'Message sent successfully'});
+      setFormDetails(formInitialDetails);
     } else {
-      setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
+      setStatus({ success: false, message: 'Something went wrong, please try again later.'});
     }
   };
 
