@@ -55,7 +55,7 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <h1>{`Hi! I'm Jean Junior`} <span className="txt-rotate" dataPeriod="20" data-rotate='[ "Frontend Developer", " Backend Developer" ]'> <span className="wrap">{text}</span></span></h1>
-                  <p>Soy un estudiante de Desarrollo de Aplicaciones Multiplataforma con conocimientos en programación y desarrollo  web. Interesado en aprender y aportar en proyectos. Me gusta aprender y buscar nuevos retos capaces de encontrar la mejor versión de mi, destaco por mis capacidades   al adaptarme rápidamente y  mantener el control de mis emociones.</p>
+                  <p>I am a Cross-Platform Application Development student with skills in programming and web development. I am eager to learn and contribute to projects. I enjoy acquiring new knowledge and seeking out challenges that bring out the best in me. I stand out for my ability to adapt quickly and maintain my composure in any situation.</p>
                     <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>Let’s work together <ArrowRightCircle size={25} /></button>
                 </div>}
             </TrackVisibility>
