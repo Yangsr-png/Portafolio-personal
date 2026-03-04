@@ -10,7 +10,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [  "Frontend Developer", " Backend Developer" ];
+  const toRotate = [  "Full-Stack Developer"," "  ];
   const period = 1000;
 
   useEffect(() => {
@@ -54,7 +54,7 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <h1>{`Hi! I'm Jean Junior`} <span className="txt-rotate" dataPeriod="20" data-rotate='[ "Frontend Developer", " Backend Developer" ]'> <span className="wrap">{text}</span></span></h1>
+                <h1>{`Hi! I'm Jean Junior`} <span><p>   </p></span><span className="txt-rotate" dataPeriod="20" data-rotate='[ " Full-Stack Developer", " "]'> <span className="wrap">{text}</span></span></h1>
                   <p>I am a Cross-Platform Application Development student with skills in programming and web development. I am eager to learn and contribute to projects. I enjoy acquiring new knowledge and seeking out challenges that bring out the best in me. I stand out for my ability to adapt quickly and maintain my composure in any situation.</p>
                     <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>Let’s work together <ArrowRightCircle size={25} /></button>
                 </div>}
